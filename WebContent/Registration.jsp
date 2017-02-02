@@ -18,9 +18,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1 style="margin-top:50px; margin-left:50px; zoom:1.5">Register an account here</h1>
+	<%	String referer = request.getHeader("referer");
+		if(referer.contains("Login")){
+			out.println("<h4 style='color: OrangeRed; margin-top:50px; margin-left:70px;'>Your username and password are not correct. If you do not have an account, you can register here.</h2>");
+		}
+	
+	%>
+
+
+	<h1 style="margin-top:30px; margin-left:50px; zoom:1.5">Register an account here</h1>
 	<div style="margin-left:70px; margin-top:20px; zoom:1.2;">
-		<form action="" method="post">
+		<form action="Registration" method="post">
 			<div class="form-group" style="width:300px; display: inline-block;">
 	    		<label for="userName">User Name: </label>
 	   		 	<input type="text" class="form-control" id="userName" name="userName" placeholder="Input your username here">
@@ -44,9 +52,9 @@
 	  		<div style="margin-top:35px; margin-left:80px; float:left;">
 	  			<span>Already have an account?&nbsp;&nbsp;<a class="" href="Login.jsp" role="button"">Login here</a></span>
 	  		</div>
-	  		
 		</form>
 	</div>
+
 	<script src="JavaScript\PasswordConfirm.js"></script>
 </body>
 </html>

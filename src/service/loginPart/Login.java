@@ -40,7 +40,7 @@ public class Login extends HttpServlet {
 		boolean validation = newUser.validateUser(propFilePath);
 		
 		if(validation){
-			response.sendRedirect("LoginSuccess.jsp"); 	
+			response.sendRedirect("CustomerHomePage.jsp"); 	
 		}else{
 			response.sendRedirect("Registration.jsp"); 	
 		}

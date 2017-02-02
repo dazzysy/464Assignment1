@@ -4,6 +4,7 @@
 
 buttonClick();
 
+
 function checkUserNameUsed(){
 	
 }
@@ -15,7 +16,9 @@ function checkUserNameEmpty(){
 		span1.css({'color':'OrangeRed', 'display':'none'});
 		span1.text("Username cannot be empty!");
 		span1.fadeIn();
+		return false;
 	}
+	return true;
 }
 
 function checkPasswordMatch(){
@@ -26,18 +29,20 @@ function checkPasswordMatch(){
 		span2.css({'color':'OrangeRed', 'display':'none'});
 		span2.text("Password cannot be empty!");
 		span2.fadeIn();
-		span2.css();
+		return false;
 	}else{
 		if(pass1 == pass2){
-			var span2 = $("#span2");
-			span2.css({'color':'ForestGreen', 'display':'none'});
-			span2.text("Two password are matched!");
-			span2.fadeIn();
+//			var span2 = $("#span2");
+//			span2.css({'color':'ForestGreen', 'display':'none'});
+//			span2.text("Two password are matched!");
+//			span2.fadeIn();
+			return true;
 		}else{
 			var span2 = $("#span2");
 			span2.css({'color':'OrangeRed', 'display':'none'});
 			span2.text("Two password are not matched!");
 			span2.fadeIn();
+			return false;
 		}
 	}
 	
@@ -52,8 +57,12 @@ function buttonClick(){
 	$(document).ready(function(){
 		$("#button1").click(function(){
 			clearSpan();
-			checkPasswordMatch();
-			checkUserNameEmpty();
+			var check1 = checkPasswordMatch();
+			var check2 = checkUserNameEmpty();
+			if(check1&&check2){
+				$("#button1").attr("type","submit");
+				$("#button1").click();
+			}
 		});
 	});
 }
