@@ -26,6 +26,7 @@ function checkPasswordMatch(){
 		span2.css({'color':'OrangeRed', 'display':'none'});
 		span2.text("Password cannot be empty!");
 		span2.fadeIn();
+		span2.css();
 	}else{
 		if(pass1 == pass2){
 			var span2 = $("#span2");
