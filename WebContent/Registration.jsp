@@ -18,12 +18,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%	String referer = request.getHeader("referer");
-		if(referer.contains("Login")){
-			out.println("<h4 style='color: OrangeRed; margin-top:50px; margin-left:70px;'>Your username and password are not correct. If you do not have an account, you can register here.</h2>");
-		}
-	
-	%>
 
 
 	<h1 style="margin-top:30px; margin-left:50px; zoom:1.5">Register an account here</h1>
@@ -52,6 +46,7 @@
 	  		<div style="margin-top:35px; margin-left:80px; float:left;">
 	  			<span>Already have an account?&nbsp;&nbsp;<a class="" href="Login.jsp" role="button"">Login here</a></span>
 	  		</div>
+	  		
 		</form>
 	</div>
 
