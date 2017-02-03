@@ -19,7 +19,16 @@
 </head>
 <body>
 
-
+	<%
+	String referer = request.getHeader("referer");
+	if(referer != null){
+		if(referer.contains("Registration")){
+			out.println("<h4 style='margin-top:50px; margin-left:50px; color:OrangeRed;'>The username have already been used. Please use another username!</h4>");
+		}
+	}
+	
+	
+	%>
 	<h1 style="margin-top:30px; margin-left:50px; zoom:1.5">Register an account here</h1>
 	<div style="margin-left:70px; margin-top:20px; zoom:1.2;">
 		<form action="Registration" method="post">

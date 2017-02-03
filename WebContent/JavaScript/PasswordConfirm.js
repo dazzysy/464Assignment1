@@ -5,10 +5,6 @@
 buttonClick();
 
 
-function checkUserNameUsed(){
-	
-}
-
 function checkUserNameEmpty(){
 	var userName = $("#userName").val();
 	if(userName == ""){

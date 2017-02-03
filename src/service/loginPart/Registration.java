@@ -1,6 +1,12 @@
 package service.loginPart;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Properties;
+
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -25,7 +31,35 @@ public class Registration extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.sendRedirect("Login.jsp");
+		String userName = request.getParameter("userName");
+		String password = request.getParameter("password");
+		ServletContext sc = this.getServletContext();
+		String propFilePath = sc.getRealPath("/WEB-INF/users.properties");
+		Properties p = new Properties();
+		FileInputStream fis = null;
+		PrintWriter pw = response.getWriter();
+		
+		try {
+			fis = new FileInputStream(propFilePath);
+			p.load(fis);
+			
+			if(p.getProperty(userName) != null){
+				response.sendRedirect("Registration.jsp");
+				pw.println("lalala");
+				
+			}else{
+				p.setProperty(userName, password);
+				p.store(new FileOutputStream(propFilePath), null);
+				response.sendRedirect("Login.jsp"); // Link-redirection
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			if (fis != null) {
+				fis.close();
+			}
+		}
 	}
 
 	/**
