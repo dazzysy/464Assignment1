@@ -4,6 +4,13 @@
 
 buttonClick();
 
+//This function is only used to show that the user name have been used.
+function showUserNameUsed(){
+	var span1 = $("#span1");
+	span1.css({'color':'OrangeRed', 'display':'none'});
+	span1.text("The username has been used!");
+	span1.fadeIn();
+}
 
 function checkUserNameEmpty(){
 	var userName = $("#userName").val();

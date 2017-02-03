@@ -45,7 +45,6 @@ public class Registration extends HttpServlet {
 			
 			if(p.getProperty(userName) != null){
 				response.sendRedirect("Registration.jsp");
-				pw.println("lalala");
 				
 			}else{
 				p.setProperty(userName, password);
