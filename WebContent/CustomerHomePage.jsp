@@ -33,8 +33,8 @@
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid"  style="zoom:1.2;">
 	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="navbar-header">
-	      <a class="navbar-brand" href="#">Customer Home Page</a>
+	     <div class="navbar-header">
+	      <a class="navbar-brand" href="CustomerHomePage.jsp">Customer Home Page</a>
 	    </div>
 	
 	    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -57,9 +57,9 @@
 	        </li>
 	      </ul>
 	      
-	      <form class="navbar-form navbar-left">
+	      <form class="navbar-form navbar-left" action="productionSearch">
 	        <div class="form-group" style="margin-left:20px;">
-	          <input type="text" class="form-control" placeholder="Search">
+	          <input type="text" class="form-control" placeholder="Search" name="searchContent">
 	        </div>
 	        <button type="submit" class="btn btn-default">Submit</button>
 	      </form>
@@ -95,7 +95,7 @@
 								<h4>Item Name:</h4>
 								<h4>Item Price:</h4>
 								<div style="margin-top:20px;">
-								<form action="">
+								<form action="ViewProductDetails.jsp">
 									<input type="hidden" value="1" name="itemID">
 									<button type="submit" class="btn btn-info">View the detail</button>
 								</form>
@@ -106,7 +106,7 @@
 								<h4>Item Name:</h4>
 								<h4>Item Price:</h4>
 								<div style="margin-top:20px;">
-								<form action="">
+								<form action="ViewProductDetails.jsp">
 									<input type="hidden" value="4" name="itemID">
 									<button type="submit" class="btn btn-info">View the detail</button>
 								</form>
@@ -117,7 +117,7 @@
 								<h4>Item Name:</h4>
 								<h4>Item Price:</h4>
 								<div style="margin-top:20px;">
-								<form action="">
+								<form action="ViewProductDetails.jsp">
 									<input type="hidden" value="7" name="itemID">
 									<button type="submit" class="btn btn-info">View the detail</button>
 								</form>
@@ -130,7 +130,7 @@
 								<h4>Item Name:</h4>
 								<h4>Item Price:</h4>
 								<div style="margin-top:20px;">
-								<form action="">
+								<form action="ViewProductDetails.jsp">
 									<input type="hidden" value="2" name="itemID">
 									<button type="submit" class="btn btn-info">View the detail</button>
 								</form>
@@ -141,7 +141,7 @@
 								<h4>Item Name:</h4>
 								<h4>Item Price:</h4>
 								<div style="margin-top:20px;">
-								<form action="">
+								<form action="ViewProductDetails.jsp">
 									<input type="hidden" value="5" name="itemID">
 									<button type="submit" class="btn btn-info">View the detail</button>
 								</form>
@@ -152,7 +152,7 @@
 								<h4>Item Name:</h4>
 								<h4>Item Price:</h4>
 								<div style="margin-top:20px;">
-								<form action="">
+								<form action="ViewProductDetails.jsp">
 									<input type="hidden" value="8" name="itemID">
 									<button type="submit" class="btn btn-info">View the detail</button>
 								</form>
@@ -165,7 +165,7 @@
 								<h4>Item Name:</h4>
 								<h4>Item Price:</h4>
 								<div style="margin-top:20px;">
-								<form action="">
+								<form action="ViewProductDetails.jsp">
 									<input type="hidden" value="3" name="itemID">
 									<button type="submit" class="btn btn-info">View the detail</button>
 								</form>
@@ -176,7 +176,7 @@
 								<h4>Item Name:</h4>
 								<h4>Item Price:</h4>
 								<div style="margin-top:20px;">
-								<form action="">
+								<form action="ViewProductDetails.jsp">
 									<input type="hidden" value="6" name="itemID">
 									<button type="submit" class="btn btn-info">View the detail</button>
 								</form>
@@ -187,7 +187,7 @@
 								<h4>Item Name:</h4>
 								<h4>Item Price:</h4>
 								<div style="margin-top:20px;">
-								<form action="">
+								<form action="ViewProductDetails.jsp">
 									<input type="hidden" value="9" name="itemID">
 									<button type="submit" class="btn btn-info">View the detail</button>
 								</form>

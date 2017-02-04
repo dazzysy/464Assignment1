@@ -1,4 +1,4 @@
-package service.loginPart;
+package service.servlet;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
