@@ -148,8 +148,15 @@
 					
 				<div class="col-sm-1">
 					<div class="mostRightDiv">
-						<a href="#" class="btn btn-circle-lg btn-success" style="margin-top:-30px;"><span class="glyphicon glyphicon-shopping-cart" style="vertical-align:top"></span> </a>
-						<a onclick="goBack()" href="#" class="btn btn-circle-lg btn-danger" style="margin-top:40px;"><span class="glyphicon glyphicon-arrow-left" style="vertical-align:top"></span> </a>
+						<form style="margin-top:-85px;" action="">
+							<div class="form-group" style="">
+	    						<label for="userName">Qty: </label>
+	   		 					<input type="number" class="form-control" id="quantity" name="quantity">
+	  						</div>
+							<a href="#" class="btn btn-circle-lg btn-success" style="margin-top:30px;"><span class="glyphicon glyphicon-shopping-cart" style="vertical-align:top"></span> </a>
+						</form>
+						
+						<a onclick="goBack()" href="#" class="btn btn-circle-lg btn-danger" style="margin-top:30px;"><span class="glyphicon glyphicon-arrow-left" style="vertical-align:top"></span> </a>
 						<script>function goBack() {window.history.back();}</script>
 						
 					</div>
